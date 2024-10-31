@@ -15,7 +15,10 @@ export function Hero() {
             <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
                 <div className="flex flex-col justify-center space-y-8">
                     <div className="flex items-center space-x-2 rounded-full bg-white/10 px-3 py-1.5 w-fit">
-                        <span className="text-sm text-white/80">Available for work</span>
+                        <span className="flex text-sm text-white/80">
+                            <span className="flex w-3 h-3 my-auto mx-1 bg-green-500 rounded-full" />
+                            Available for work
+                        </span>
                     </div>
                 
                     <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
@@ -33,7 +36,7 @@ export function Hero() {
                         </button>
                     </div>
                 </div>
-                <div className="relative mx-auto w-full max-w-sm overflow-hidden lg:mx-0">
+                <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-xl lg:mx-0 bg-gradient-to-t from-blue-400 to-trasparent">
                     <div className="aspect-square rounded-[32px]">
                         <img
                             src="/logo.png"
