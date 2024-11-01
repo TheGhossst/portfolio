@@ -11,7 +11,7 @@ export function Hero() {
         document.body.removeChild(link)
     }
     return (
-        <div className="flex min-h-screen items-center px-4 py-20" id = "home">
+        <div className="flex min-h-screen items-center px-4 py-20 mx-auto" id = "home">
             <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
                 <div className="flex flex-col justify-center space-y-8">
                     <div className="flex items-center space-x-2 rounded-full bg-white/10 px-3 py-1.5 w-fit">
@@ -36,7 +36,7 @@ export function Hero() {
                         </button>
                     </div>
                 </div>
-                <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-xl lg:mx-0 bg-gradient-to-t from-blue-400 to-trasparent">
+                <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-xl lg:mx-0">
                     <div className="aspect-square rounded-[32px]">
                         <img
                             src="/logo.png"
