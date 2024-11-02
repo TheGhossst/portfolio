@@ -11,7 +11,7 @@ export function Hero() {
         document.body.removeChild(link)
     }
     return (
-        <div className="flex min-h-screen items-center px-4 py-20 mx-auto" id = "home">
+        <div className="flex-1 min-h-fit items-center px-4 py-20 md:container md:mx-auto" id = "home">
             <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
                 <div className="flex flex-col justify-center space-y-8">
                     <div className="flex items-center space-x-2 rounded-full bg-white/10 px-3 py-1.5 w-fit">
