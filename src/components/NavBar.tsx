@@ -6,7 +6,7 @@ export function NavBar() {
     const [isActive, setIsActive] = useState('Home')
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-    const navItems = ['Home', 'About', 'Projects']
+    const navItems = ['Home', 'About', 'Journey', 'Projects']
 
     return (
         <nav className="px-4 py-4">
@@ -27,7 +27,7 @@ export function NavBar() {
                             {navItems.map((item) => (
                                 <a
                                     key={item}
-                                    href={`/${item.toLowerCase()}`}
+                                    href={`#${item.toLowerCase()}`}
                                     className={`${
                                         isActive === item
                                         ? 'text-white'

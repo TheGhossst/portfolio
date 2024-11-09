@@ -1,6 +1,6 @@
 export function AboutMe() {
     return (
-        <section className="w-full py-4">
+        <section className="w-full py-4" id = 'about'>
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto bg-zinc-800/90 rounded-2xl p-12 pr-16 max-h-fit relative">
                         <div className="text-center">
