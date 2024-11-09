@@ -13,9 +13,9 @@ export function NavBar() {
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 <div className="text-white text-2xl font-bold">
                     <a href="/" className="flex items-center">
-                        <img 
-                            src={logo} 
-                            alt="Company Logo" 
+                        <img
+                            src={logo}
+                            alt="Company Logo"
                             className="h-8 w-auto"
                         />
                     </a>
@@ -28,11 +28,10 @@ export function NavBar() {
                                 <a
                                     key={item}
                                     href={`#${item.toLowerCase()}`}
-                                    className={`${
-                                        isActive === item
-                                        ? 'text-white'
-                                        : 'text-gray-400 hover:text-white'
-                                    } transition-colors duration-200`}
+                                    className={`${isActive === item
+                                            ? 'text-white'
+                                            : 'text-gray-400 hover:text-white'
+                                        } transition-colors duration-200`}
                                     onClick={() => setIsActive(item)}
                                 >
                                     {item}
@@ -68,11 +67,10 @@ export function NavBar() {
                             <a
                                 key={item}
                                 href={`/${item.toLowerCase()}`}
-                                className={`block ${
-                                    isActive === item
-                                    ? 'text-white'
-                                    : 'text-gray-400 hover:text-white'
-                                } transition-colors duration-200`}
+                                className={`block ${isActive === item
+                                        ? 'text-white'
+                                        : 'text-gray-400 hover:text-white'
+                                    } transition-colors duration-200`}
                                 onClick={() => {
                                     setIsActive(item)
                                     setIsMobileMenuOpen(false)

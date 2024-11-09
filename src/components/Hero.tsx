@@ -53,20 +53,20 @@ export function Hero() {
                             Available for work
                         </span>
                     </div>
-                
+
                     <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
                         Something very cool about me
                     </h1>
-                
+
                     <div className="flex flex-wrap gap-4">
-                        <button 
+                        <button
                             className="inline-flex items-center space-x-2 rounded-full bg-blue-500 px-6 py-3 text-white transition-colors hover:bg-blue-600"
                             onClick={handleDownload}
                         >
                             <Download className="h-5 w-5" />
                             <span>Download Résumé</span>
                         </button>
-                        <button 
+                        <button
                             className="inline-flex items-center space-x-2 rounded-full border border-white/20 px-6 py-3 text-white transition-colors hover:bg-white/10"
                             onClick={handleScroll}
                         >
