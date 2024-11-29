@@ -25,7 +25,7 @@ export function ProjectCard({ name, url, openGraphImageUrl }: ProjectCardProps) 
                 </div>
             </div>
             <div className="p-4 flex flex-col justify-between h-full">
-                <h3 className="font-semibold text-lg text-white group-hover:text-blue-400 transition-colors">
+                <h3 className="font-semibold text-lg text-white group-hover:text-blue-400 transition-colors mb-16">
                     {name}
                 </h3>             
             </div>
