@@ -29,19 +29,9 @@ export function ProjectCard({ name, description, url, primaryLanguage, openGraph
                 </div>
             </div>
             <div className="p-4 flex flex-col justify-between h-full">
-                <h3 className="font-semibold text-lg text-white group-hover:text-blue-400 transition-colors">
+                <h3 className="font-semibold text-lg text-white group-hover:text-blue-400 transition-colors mb-16">
                     {name}
                 </h3>
-                <p className="mt-1 text-sm text-zinc-400 line-clamp-2">
-                    {description}
-                </p>
-                <div className="mt-4">
-                    {primaryLanguage && (
-                        <span className="px-2 py-1 rounded text-sm bg-zinc-800/90 text-white">
-                            {primaryLanguage.name}
-                        </span>
-                    )}
-                </div>
             </div>
         </a>
     )
