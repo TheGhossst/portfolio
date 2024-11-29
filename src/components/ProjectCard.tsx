@@ -1,14 +1,10 @@
 interface ProjectCardProps {
     name: string
-    description: string
     url: string
-    primaryLanguage: {
-        name: string
-    } | null
     openGraphImageUrl: string
 }
 
-export function ProjectCard({ name, description, url, primaryLanguage, openGraphImageUrl }: ProjectCardProps) {
+export function ProjectCard({ name, url, openGraphImageUrl }: ProjectCardProps) {
     return (
         <a
             href={url}
@@ -29,9 +25,9 @@ export function ProjectCard({ name, description, url, primaryLanguage, openGraph
                 </div>
             </div>
             <div className="p-4 flex flex-col justify-between h-full">
-                <h3 className="font-semibold text-lg text-white group-hover:text-blue-400 transition-colors mb-16">
+                <h3 className="font-semibold text-lg text-white group-hover:text-blue-400 transition-colors">
                     {name}
-                </h3>
+                </h3>             
             </div>
         </a>
     )

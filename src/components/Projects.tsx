@@ -34,9 +34,7 @@ export function Projects() {
                         <ProjectCard
                             key={project.name}
                             name={project.name}
-                            description={project.description}
                             url={project.url}
-                            primaryLanguage={project.primaryLanguage}
                             openGraphImageUrl={project.openGraphImageUrl}
                         />
                     ))}
