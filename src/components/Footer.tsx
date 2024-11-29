@@ -1,15 +1,6 @@
 import { Github, Linkedin, FileText } from 'lucide-react';
 
 export function Footer() {
-
-    function handleDownload() {
-        const link = document.createElement('a')
-        link.href = '/Resume.pdf'
-        link.download = 'resume.pdf'
-        document.body.appendChild(link)
-        link.click()
-        document.body.removeChild(link)
-    }
     return (
         <footer className="border-t-2 border-gray-700 py-8 bottom-0 left-0 right-0">
             <div className="container mx-auto px-4">
