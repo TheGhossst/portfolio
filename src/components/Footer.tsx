@@ -30,7 +30,7 @@ export function Footer() {
                         className="flex flex-col items-center group"
                     >
                         <FileText className="h-6 w-6 text-gray-400 group-hover:text-white transition-colors duration-200" />
-                        <span className="mt-2 text-sm text-gray-400 group-hover:text-white transition-colors duration-200">Resume</span>
+                        <span className="mt-2 text-sm text-gray-400 group-hover:text-white transition-colors duration-200">Résumé</span>
                     </a>
                 </div>
             </div>
