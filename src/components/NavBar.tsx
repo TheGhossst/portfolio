@@ -42,7 +42,7 @@ export function NavBar() {
                 </div>
 
                 <a
-                    href="/contact"
+                    href="#contact"
                     className="hidden md:block bg-white text-black px-4 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200"
                 >
                     Contact Me
@@ -80,7 +80,8 @@ export function NavBar() {
                             </a>
                         ))}
                         <a
-                            href="/contact"
+                            key = "contact"
+                            href= "#contact"
                             className="block text-center bg-white text-black px-4 py-2 rounded-md"
                         >
                             Contact Me

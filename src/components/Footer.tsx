@@ -2,7 +2,7 @@ import { Github, Linkedin, FileText } from 'lucide-react';
 
 export function Footer() {
     return (
-        <footer className="border-t-2 border-gray-700 py-8 bottom-0 left-0 right-0">
+        <footer className="border-t-2 border-gray-700 py-8 bottom-0 left-0 right-0" id = "contact">
             <div className="container mx-auto px-4">
                 <div className="flex justify-center space-x-10">
                     <a
