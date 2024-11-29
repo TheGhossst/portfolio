@@ -2,14 +2,18 @@ import { useEffect, useRef } from 'react'
 import { lifePathData } from '../data/Path'
 
 export function LifePath() {
-  const observerRef = useRef<IntersectionObserver | null>(null)
-  
+    const observerRef = useRef<IntersectionObserver | null>(null)
+
     useEffect(() => {
         observerRef.current = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('animate-in')
+                        entry.target.classList.remove('animate-out')
+                    } else {
+                        entry.target.classList.remove('animate-in')
+                        entry.target.classList.add('animate-out')
                     }
                 })
             },
@@ -26,19 +30,18 @@ export function LifePath() {
     }, [])
 
     return (
-        <section className="w-full py-24 relative" id = "journey">
+        <section className="w-full py-24 relative" id="journey">
             <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/50 to-zinc-900/80 pointer-events-none" />
             <div className="container px-4 md:px-6 mx-auto relative">
                 <h2 className="text-4xl font-bold text-center mb-16 text-white">My Journey</h2>
                 <div className="relative max-w-6xl mx-auto">
                     <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-gradient-to-b from-blue-500/50 to-purple-500/50 hidden md:block" />
-                
+
                     {lifePathData.map((node, index) => (
                         <div
                             key={node.title}
-                            className={`path-node opacity-0 translate-y-4 transition-all duration-700 ease-out flex items-center mb-16 ${
-                                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                            } flex-col`}
+                            className={`path-node opacity-0 translate-y-4 transition-all duration-700 ease-out flex items-center mb-16 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                                } flex-col`}
                             style={{
                                 transitionDelay: `${index * 200}ms`
                             }}
