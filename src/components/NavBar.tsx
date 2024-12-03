@@ -39,8 +39,8 @@ export function NavBar({ isResumeOpen }: NavProps) {
                                     <button
                                         key={item}
                                         className={`${isActive === item
-                                                ? 'text-white'
-                                                : 'text-gray-400 hover:text-white'
+                                            ? 'text-white'
+                                            : 'text-gray-400 hover:text-white'
                                             } transition-colors duration-200`}
                                         onClick={() => {
                                             setIsActive(item)
@@ -81,8 +81,8 @@ export function NavBar({ isResumeOpen }: NavProps) {
                             <button
                                 key={item}
                                 className={`block ${isActive === item
-                                        ? 'text-white'
-                                        : 'text-gray-400 hover:text-white'
+                                    ? 'text-white'
+                                    : 'text-gray-400 hover:text-white'
                                     } transition-colors duration-200`}
                                 onClick={() => {
                                     setIsActive(item)
