@@ -2,7 +2,11 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import logo from "/logo.png"
 
-export function NavBar() {
+interface NavProps {
+    isResumeOpen: boolean
+}
+
+export function NavBar({isResumeOpen} : NavProps) {
     const [isActive, setIsActive] = useState('Home')
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -20,26 +24,27 @@ export function NavBar() {
                         />
                     </a>
                 </div>
-
-                <div className="hidden md:block">
-                    <div className="bg-gray-600 rounded-md p-4">
-                        <div className="flex items-center gap-8">
-                            {navItems.map((item) => (
-                                <a
-                                    key={item}
-                                    href={`/#${item.toLowerCase()}`}
-                                    className={`${isActive === item
-                                            ? 'text-white'
-                                            : 'text-gray-400 hover:text-white'
-                                        } transition-colors duration-200`}
-                                    onClick={() => setIsActive(item)}
-                                >
-                                    {item}
-                                </a>
-                            ))}
+                {!isResumeOpen &&
+                    <div className="hidden md:block">
+                        <div className="bg-gray-600 rounded-md p-4">
+                            <div className="flex items-center gap-8">
+                                {navItems.map((item) => (
+                                    <a
+                                        key={item}
+                                        href={`/#${item.toLowerCase()}`}
+                                        className={`${isActive === item
+                                                ? 'text-white'
+                                                : 'text-gray-400 hover:text-white'
+                                            } transition-colors duration-200`}
+                                        onClick={() => setIsActive(item)}
+                                    >
+                                        {item}
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
+                }   
 
                 <a
                     href="#contact"
