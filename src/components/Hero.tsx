@@ -1,5 +1,6 @@
-import { ArrowDown, Download } from "lucide-react"
+import { ArrowDown, ExternalLink } from 'lucide-react'
 import { useEffect, useRef } from "react"
+import { Link } from "react-router-dom"
 
 export function Hero() {
     const scrollRef = useRef<HTMLDivElement>(null)
@@ -27,15 +28,6 @@ export function Hero() {
         }
     }, [])
 
-    function handleDownload() {
-        const link = document.createElement('a')
-        link.href = '/Resume.pdf'
-        link.download = 'resume.pdf'
-        document.body.appendChild(link)
-        link.click()
-        document.body.removeChild(link)
-    }
-
     function handleScroll() {
         const nextSection = document.getElementById('about')
         if (nextSection) {
@@ -59,13 +51,13 @@ export function Hero() {
                     </h1>
 
                     <div className="flex flex-wrap gap-4">
-                        <button
+                        <Link
+                            to="/resume"
                             className="inline-flex items-center space-x-2 rounded-full bg-blue-500 px-6 py-3 text-white transition-colors hover:bg-blue-600"
-                            onClick={handleDownload}
                         >
-                            <Download className="h-5 w-5" />
-                            <span>Download Résumé</span>
-                        </button>
+                            <ExternalLink className="h-5 w-5" />
+                            <span>View Interactive Résumé</span>
+                        </Link>
                         <button
                             className="inline-flex items-center space-x-2 rounded-full border border-white/20 px-6 py-3 text-white transition-colors hover:bg-white/10"
                             onClick={handleScroll}
@@ -88,3 +80,4 @@ export function Hero() {
         </div>
     )
 }
+
