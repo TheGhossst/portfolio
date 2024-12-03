@@ -6,7 +6,7 @@ import { LifePath } from "./components/LifePath";
 import { Projects } from "./components/Projects";
 import { Footer } from "./components/Footer";
 import { InteractiveResume } from "./components/InteractiveResume";
-import { ScrollToTop } from "./components/scrollToTop";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 export function App() {
   return (
