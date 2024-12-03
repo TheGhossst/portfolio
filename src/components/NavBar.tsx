@@ -6,11 +6,18 @@ interface NavProps {
     isResumeOpen: boolean
 }
 
-export function NavBar({isResumeOpen} : NavProps) {
+export function NavBar({ isResumeOpen }: NavProps) {
     const [isActive, setIsActive] = useState('Home')
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     const navItems = ['Home', 'About', 'Journey', 'Projects']
+
+    const handleScroll = (section: string) => {
+        const element = document.getElementById(section);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 
     return (
         <nav className="px-4 py-4">
@@ -29,29 +36,31 @@ export function NavBar({isResumeOpen} : NavProps) {
                         <div className="bg-gray-600 rounded-md p-4">
                             <div className="flex items-center gap-8">
                                 {navItems.map((item) => (
-                                    <a
+                                    <button
                                         key={item}
-                                        href={`/#${item.toLowerCase()}`}
                                         className={`${isActive === item
                                                 ? 'text-white'
                                                 : 'text-gray-400 hover:text-white'
                                             } transition-colors duration-200`}
-                                        onClick={() => setIsActive(item)}
+                                        onClick={() => {
+                                            setIsActive(item)
+                                            handleScroll(item.toLowerCase())
+                                        }}
                                     >
                                         {item}
-                                    </a>
+                                    </button>
                                 ))}
                             </div>
                         </div>
                     </div>
-                }   
+                }
 
-                <a
-                    href="#contact"
+                <button
+                    onClick={() => handleScroll('contact')}
                     className="hidden md:block bg-white text-black px-4 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200"
                 >
                     Contact Me
-                </a>
+                </button>
 
                 <button
                     className="md:hidden text-white"
@@ -69,9 +78,8 @@ export function NavBar({isResumeOpen} : NavProps) {
                 <div className="md:hidden mt-4 bg-gray-600 rounded-md p-4">
                     <div className="space-y-4">
                         {navItems.map((item) => (
-                            <a
+                            <button
                                 key={item}
-                                href={`/${item.toLowerCase()}`}
                                 className={`block ${isActive === item
                                         ? 'text-white'
                                         : 'text-gray-400 hover:text-white'
@@ -79,18 +87,18 @@ export function NavBar({isResumeOpen} : NavProps) {
                                 onClick={() => {
                                     setIsActive(item)
                                     setIsMobileMenuOpen(false)
+                                    handleScroll(item.toLowerCase())
                                 }}
                             >
                                 {item}
-                            </a>
+                            </button>
                         ))}
-                        <a
-                            key = "contact"
-                            href= "#contact"
+                        <button
+                            onClick={() => handleScroll('contact')}
                             className="block text-center bg-white text-black px-4 py-2 rounded-md"
                         >
                             Contact Me
-                        </a>
+                        </button>
                     </div>
                 </div>
             )}
