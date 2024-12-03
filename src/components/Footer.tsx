@@ -1,4 +1,5 @@
 import { Github, Linkedin, FileText } from 'lucide-react';
+import { Link } from "react-router-dom"
 
 export function Footer() {
     return (
@@ -23,7 +24,7 @@ export function Footer() {
                         <Linkedin className="h-6 w-6 text-gray-400 group-hover:text-white transition-colors duration-200" />
                         <span className="mt-2 text-sm text-gray-400 group-hover:text-white transition-colors duration-200">LinkedIn</span>
                     </a>
-                    <a 
+                    {/*<a 
                         href="./Resume.pdf" 
                         target="_blank" 
                         rel="noopener noreferrer" 
@@ -31,7 +32,11 @@ export function Footer() {
                     >
                         <FileText className="h-6 w-6 text-gray-400 group-hover:text-white transition-colors duration-200" />
                         <span className="mt-2 text-sm text-gray-400 group-hover:text-white transition-colors duration-200">Résumé</span>
-                    </a>
+                    </a>*/}
+                    <Link to = "/resume" className='flex flex-col items-center group'>
+                        <FileText className="h-6 w-6 text-gray-400 group-hover:text-white transition-colors duration-200" />
+                        <span className="mt-2 text-sm text-gray-400 group-hover:text-white transition-colors duration-200">Résumé</span>
+                    </Link>
                 </div>
             </div>
         </footer>
