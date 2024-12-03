@@ -27,7 +27,7 @@ export function NavBar() {
                             {navItems.map((item) => (
                                 <a
                                     key={item}
-                                    href={`#${item.toLowerCase()}`}
+                                    href={`/#${item.toLowerCase()}`}
                                     className={`${isActive === item
                                             ? 'text-white'
                                             : 'text-gray-400 hover:text-white'
