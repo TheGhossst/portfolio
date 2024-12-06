@@ -31,3 +31,103 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out forwards;
+}
+
+.touch-none {
+  touch-action: none;
+}
+
+@keyframes fade-up-and-out {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.animate-fade-up-and-out {
+  animation: fade-up-and-out 10s ease-out forwards;
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes text-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  70% { transform: scale(0.9); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.animate-text-gradient {
+  animation: text-gradient 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.5s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.coin-cursor {
+  cursor: url('https://img.icons8.com/?size=60&id=Bnal8CzCxL55&format=png&color=000000') 20 20, auto;
+}
