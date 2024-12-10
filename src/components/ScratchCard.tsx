@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, useCallback } from 'react'
+import React, { useRef, useEffect, useState, useCallback } from 'react'
 
 interface ScratchCardProps {
     image: string
@@ -148,7 +148,14 @@ export function ScratchCard({ image, width, height, setFinish }: ScratchCardProp
             <img
                 src={image}
                 alt="Hidden"
-                className="absolute top-0 left-0 w-full h-full object-cover rounded-[32px]"
+                className="absolute top-0 left-0 w-full h-full object-cover rounded-[32px] select-none"
+                style={{
+                    WebkitUserSelect: 'none',
+                    MozUserSelect: 'none',
+                    msUserSelect: 'none',
+                    userSelect: 'none',
+                    pointerEvents: 'none'
+                }}
             />
             <canvas
                 ref={canvasRef}
