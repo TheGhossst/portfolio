@@ -37,11 +37,70 @@ export function InteractiveResume() {
         { name: "Python OOPS", issuer: "UDEMY", date: "October 2023" },
         { name: "NTPEL- CyberSecurity", issuer: "NPTEL", date: "May 2024" },
         { name: "HackerRank Problem Solving", issuer: "HackerRank", date: "July 2024" },
-        { name: "HackerRank Python", issuer: "HackerRank", date: "April 2024" }
+        { name: "HackerRank Python", issuer: "HackerRank", date: "April 2024" },
+        { name: "HackerRank React", issuer: "HackerRank", date: "December 2024" }
+    ]
+
+    const projects: Project[] = [
+        {
+            title: "E-VOTING USING BLOCKCHAIN",
+            date: "Present",
+            tech: "Next.js, Solidity, Firebase",
+            link: "https://e-voting-6r0guloem-hipster16s-projects.vercel.app",
+            description: [
+                "Developed a secure and transparent e-voting system for college-level elections using blockchain technology.",
+                "Implemented the system to ensure the integrity and immutability of votes, providing a trustless and decentralized voting platform."
+            ]
+        },
+        {
+            title: "TuneTagger",
+            date: "October 2024",
+            tech: "React, Node.js",
+            link: "https://tunetagger.netlify.app",
+            description: [
+                "TuneTagger is a powerful and easy-to-use tool that allows you to personalize your audio files with your own creative flair. You can modify file name, artist name, album name, and cover image."
+            ]
+        },
+        {
+            title: "DishCraft",
+            date: "November 2024",
+            tech: "React Gemini",
+            link: "https://dish-craft.vercel.app",
+            description: [
+                "Generates recipe suggestions based on the ingredients."
+            ]
+        },
+        {
+            title: "PingPatrol",
+            date: "December 2024",
+            tech: "Next.JS Firebase",
+            link: "https://ping-patrol.vercel.app",
+            description: [
+                "Monitor website uptime and performance with real-time status alerts"
+            ]
+        },
+        {
+            title: "DishCraft",
+            date: "December 2024",
+            tech: "Next.JS Firebase Flask",
+            link: "https://github.com/TheGhossst/E-Commerce-Chatbot",
+            description: [
+                "An e-commerce chatbot built with Next.js, Python Flask, and Firebase to enhance the shopping experience by providing an efficient interface for product search, exploration, and purchase processes"
+            ]
+        },
+        {
+            title: "TabTracker",
+            date: "August 2024",
+            tech: "HTML, CSS, JavaScript, Firebase",
+            link: "https://github.com/TheGhossst/TabTracker",
+            description: [
+                "TabTracker is a handy browser extension that helps you save and manage your important links in one place."
+            ]
+        }
     ]
 
     const progSkills = ['C', 'Java', 'Python', 'Bash', 'Go lang', 'JavaScript', 'PHP']
-    const libSkills = ['Node', 'React'];
+    const libSkills = ['Node', 'React', 'Next.JS'];
     const toolSkills = ['VS code', 'Git', 'Wireshark', 'Burpsuite', 'Nmap']
     const dbSkills = ['SQL', 'SQLite', 'Firebase']
     const languages = ['English', 'Malayalam', 'Hindi', 'Sanskrit']
@@ -207,36 +266,7 @@ export function InteractiveResume() {
 
                 <Section title="Projects">
                     <motion.div className="space-y-6" variants={staggerChildren}>
-                        {[
-                            {
-                                title: "E-VOTING USING BLOCKCHAIN",
-                                date: "Present",
-                                tech: "Next.js, Solidity, Firebase",
-                                link: "https://e-voting-6r0guloem-hipster16s-projects.vercel.app",
-                                description: [
-                                    "Developed a secure and transparent e-voting system for college-level elections using blockchain technology.",
-                                    "Implemented the system to ensure the integrity and immutability of votes, providing a trustless and decentralized voting platform."
-                                ]
-                            },
-                            {
-                                title: "TuneTagger",
-                                date: "October 2024",
-                                tech: "React, Node.js",
-                                link: "https://tunetagger.netlify.app",
-                                description: [
-                                    "TuneTagger is a powerful and easy-to-use tool that allows you to personalize your audio files with your own creative flair. You can modify file name, artist name, album name, and cover image."
-                                ]
-                            },
-                            {
-                                title: "TabTracker",
-                                date: "August 2024",
-                                tech: "HTML, CSS, JavaScript, Firebase",
-                                link: "https://github.com/TheGhossst/TabTracker",
-                                description: [
-                                    "TabTracker is a handy browser extension that helps you save and manage your important links in one place."
-                                ]
-                            }
-                        ].map((project: Project, index) => (
+                        {projects.map((project: Project, index) => (
                             <motion.div key={index} variants={fadeInUp}>
                                 <h3 className="text-xl font-medium mb-1">{project.title}</h3>
                                 <p className="text-white/70 mb-2">{project.date}</p>
